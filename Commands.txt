@@ -28,3 +28,6 @@ python manage.py makemigrations
 
 -- Apply migrations (applies migration files to database)
 python manage.py migrate
+
+-- unapply all migrations for app
+python manage.py migrate {APP NAME} zero
