@@ -1,5 +1,8 @@
--- run server
-python manage.py runserver
+-- activate venv
+source .venv/Scripts/activate
+
+-- list installed packages
+pip list
 
 -- install requirements
 pip install -r requirements.txt 
@@ -7,14 +10,21 @@ pip install -r requirements.txt
 -- add packages to requirements
 pip3 freeze local > requirements.txt 
 
--- activate venv
-source .venv/Scripts/activate
 
--- list installed packages
-pip list
+-- run server
+python manage.py runserver
+
+
 
 -- create project - replace {PROJECT_NAME}  and {DIRECTORY NAME} (eg.: django-admin startproject my_project .)dot to create in currenty DIRECTORY
 django-admin startproject {PROJECT_NAME} {DIRECTORY NAME}
 
 -- create app 
 python manage.py startapp {APP NAME}
+
+
+-- Make migrations (generates new migration files)
+python manage.py makemigrations
+
+-- Apply migrations (applies migration files to database)
+python manage.py migrate
