@@ -53,3 +53,4 @@ def post_detail(request, slug):
          "comment_form": comment_form,
         },
     )
+
