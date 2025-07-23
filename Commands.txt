@@ -31,3 +31,12 @@ python manage.py migrate
 
 -- unapply all migrations for app
 python manage.py migrate {APP NAME} zero
+
+
+-- run tests
+python manage.py test
+
+
+-- sets DEBUG to False automatically
+sed -i 's/^DEBUG = True/DEBUG = False/' codestar/settings.py
+git add .
